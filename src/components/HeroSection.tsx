@@ -17,7 +17,7 @@ export const HeroSection = () => {
       <div className="mb-8 relative inline-block">
         <div className="w-40 h-40 rounded-full bg-gradient-to-br from-primary/30 to-primary/10 p-1 glow-subtle">
           <img
-              src="/placeholder.jpg"
+              src="placeholder.jpg"
               alt="Profile"
               className="w-full h-full rounded-full object-cover"
               />
