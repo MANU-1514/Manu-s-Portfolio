@@ -1,4 +1,10 @@
+
 name: Deploy to GitHub Pages
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
 
 on:
   push:
@@ -11,7 +17,10 @@ jobs:
     env:
       VITE_BASE: "/${{ github.event.repository.name }}/"
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
 
       - name: Use Node.js 18
         uses: actions/setup-node@v4
@@ -24,7 +33,16 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages (using GH_PAT if provided)
+        if: secrets.GH_PAT != ''
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GH_PAT }}
+          publish_dir: ./dist
+          publish_branch: gh-pages
+
+      - name: Deploy to GitHub Pages (using GITHUB_TOKEN)
+        if: secrets.GH_PAT == ''
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
