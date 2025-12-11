@@ -55,7 +55,7 @@ export const HeroSection = () => {
             View Projects
           </a>
           <a
-            href="/Resume.pdf"
+            href="Resume.pdf"
             download
             className="px-8 py-3 rounded-lg border border-primary/50 bg-primary/10 text-primary font-semibold transition-all hover:bg-primary/20 hover:border-primary flex items-center justify-center gap-2"
           >
