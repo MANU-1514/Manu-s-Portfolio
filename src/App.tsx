@@ -9,21 +9,25 @@ import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
-const App = () => (
-  <HelmetProvider>
-    <QueryClientProvider client={queryClient}>
-      <TooltipProvider>
-        <Toaster />
-        <Sonner />
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </BrowserRouter>
+const App = () => {
+  const basename = import.meta.env.BASE_URL || '/';
+  
+  return (
+    <HelmetProvider>
+      <QueryClientProvider client={queryClient}>
+        <TooltipProvider>
+          <Toaster />
+          <Sonner />
+          <BrowserRouter basename={basename}>
+            <Routes>
+              <Route path="/" element={<Index />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </BrowserRouter>
       </TooltipProvider>
     </QueryClientProvider>
   </HelmetProvider>
-);
+  );
+};
 
 export default App;
