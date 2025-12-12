@@ -1,73 +1,118 @@
-# Welcome to your Lovable project
+# Manu Sriram's Portfolio
 
-## Project info
+A modern, responsive portfolio website showcasing my skills, projects, and experience in Electronics & Instrumentation Engineering, IoT, and embedded systems.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+**Live Site:** https://manu-1514.github.io/Manu-s-Portfolio/
 
-## How can I edit this code?
+## Technologies Used
 
-There are several ways of editing your application.
+- **Vite** — Fast build tool and dev server
+- **React 18** — UI library
+- **TypeScript** — Type-safe JavaScript
+- **Tailwind CSS** — Utility-first CSS framework
+- **shadcn/ui** — Component library
+- **React Router** — Client-side routing
+- **React Helmet** — Document head management
 
-**Use Lovable**
+## Getting Started
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+### Prerequisites
+- Node.js (v18+)
+- npm or yarn
 
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+### Installation
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+# Clone the repository
+git clone https://github.com/MANU-1514/Manu-s-Portfolio.git
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# Navigate to the project directory
+cd Manu-s-Portfolio
 
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+# Install dependencies
+npm install
 ```
 
-**Edit a file directly in GitHub**
+### Development
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```sh
+# Start the dev server (http://localhost:8080)
+npm run dev
 
-**Use GitHub Codespaces**
+# Build for production
+npm run build
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+# Preview the production build
+npm run preview
+```
 
-## What technologies are used for this project?
+### Linting
 
-This project is built with:
+```sh
+# Run ESLint
+npm run lint
+```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## Deployment
 
-## How can I deploy this project?
+This project is deployed to GitHub Pages using GitHub Actions. Every push to the `main` branch automatically:
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+1. Builds the project
+2. Publishes to the `gh-pages` branch
+3. Updates the live site
 
-## Can I connect a custom domain to my Lovable project?
+### Manual Deployment
 
-Yes, you can!
+```sh
+npm run build
+git add -A
+git commit -m "chore: update portfolio"
+git push origin main
+```
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## Project Structure
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+```
+src/
+├── components/        # React components
+│   ├── HeroSection.tsx
+│   ├── AboutSection.tsx
+│   ├── SkillsSection.tsx
+│   ├── ProjectsSection.tsx
+│   ├── AchievementsSection.tsx
+│   ├── EducationSection.tsx
+│   ├── ContactSection.tsx
+│   └── ui/           # shadcn/ui components
+├── pages/            # Page components
+├── hooks/            # Custom React hooks
+├── lib/              # Utility functions
+├── App.tsx           # Main app component
+└── main.tsx          # Entry point
+
+public/
+├── favicon.png       # Site favicon
+├── placeholder.jpg   # Profile image
+└── Resume.pdf        # Downloadable resume
+```
+
+## Features
+
+- ✨ Responsive design (mobile, tablet, desktop)
+- 🎨 Modern UI with Tailwind CSS
+- ⚡ Fast loading with Vite
+- 📱 Mobile-friendly
+- 🔗 Social media links
+- 📄 Downloadable resume
+- 🌙 Accessible components
+
+## License
+
+This project is open source and available under the MIT License.
+
+## Contact
+
+For inquiries, please reach out via the contact section on the portfolio website.
+
+---
+
+**Built with ❤️**
